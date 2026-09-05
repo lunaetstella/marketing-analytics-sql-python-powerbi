@@ -1,55 +1,40 @@
-# marketing-analytics-sql-python-powerbi
-Marketing analytics project using SQL, Python, and Power BI to analyze customer engagement, conversion rates, marketing performance, and customer feedback, with actionable business insights and recommendations.
 # Marketing Analytics: Customer Engagement & Conversion Analysis
+
+Marketing analytics project using **SQL, Python, and Power BI** to analyze customer engagement, conversion rates, marketing performance, and customer feedback — with actionable business recommendations.
 
 ## 📊 Project Overview
 
-This project analyzes marketing and customer data for **ShopEzip**, an online retail business.
+This project analyzes marketing and customer data for **ShopEzip**, an online retail business selling sports and fitness products across 20+ categories.
 
-The business was experiencing declining conversion rates, reduced customer engagement, high marketing expenses, and a need to better understand customer feedback.
-
-The project combines **SQL, Python, Power BI, and Excel** to analyze customer behavior, marketing engagement, conversion performance, products, and customer reviews.
-
-The goal was to identify meaningful trends and provide data-driven recommendations to improve conversion, customer engagement, and customer satisfaction.
-
----
+The business was facing declining conversion rates, inconsistent customer engagement, high marketing spend, and a need to better understand customer feedback. This project combines **SQL, Python, Power BI, and Excel** to analyze customer behavior, marketing engagement, conversion performance, and product-level trends — turning raw, disconnected data into a single source of truth for decision-making.
 
 ## 🎯 Business Problems
 
-The analysis focuses on the following business challenges:
-
 - Declining customer engagement
-- Declining conversion rates
-- High marketing expenses
-- Need for better customer feedback analysis
-
----
+- Inconsistent conversion rates across the year
+- High marketing expenses relative to results
+- No structured way to analyze customer feedback at scale
 
 ## 🎯 Project Objectives
 
 - Improve conversion rates
 - Enhance customer engagement
-- Better understand customer feedback
-- Identify important trends in customer behavior
-- Provide actionable business recommendations
-
----
+- Understand customer feedback at scale
+- Identify meaningful trends in customer behavior
+- Provide actionable, data-driven recommendations
 
 ## 🛠️ Tools & Technologies
 
 | Tool | Purpose |
 |------|---------|
-| **SQL** | Data cleaning, transformation, joins, duplicate detection and analysis |
+| **SQL** | Data cleaning, transformation, joins, duplicate detection |
 | **Python** | Customer review sentiment analysis using VADER |
-| **Power BI** | KPI analysis, data modeling and interactive dashboards |
+| **Power BI** | KPI analysis, data modeling, interactive dashboards |
 | **Excel** | Initial data handling and exploration |
-
----
 
 ## 📂 Data Used
 
-The project uses multiple datasets covering:
-
+Six relational datasets were joined and analyzed together:
 - Customers
 - Products
 - Geography
@@ -57,187 +42,80 @@ The project uses multiple datasets covering:
 - Marketing Engagement
 - Customer Reviews
 
-These datasets were analyzed together to understand customer behavior, product performance, marketing engagement, and customer feedback.
-
----
-
 ## 🔄 Data Preparation
 
-SQL was used to prepare the data for analysis.
-
-Key activities included:
-
-- Combining related datasets using joins
-- Identifying duplicate customer journey records
+SQL was used to prepare the data for analysis, including:
+- Joining related datasets across customers, products, and engagement
+- Identifying and resolving duplicate customer journey records
 - Handling missing duration values
-- Cleaning inconsistent text
+- Cleaning inconsistent text fields
 - Creating product price categories
-- Transforming engagement data into an analysis-ready format
-
----
+- Transforming raw engagement data into an analysis-ready format
 
 ## 📈 Key KPIs
 
 ### Conversion Rate
+**Formula:** Conversion Rate = Conversions / Visitors × 100
 
-Conversion rate measures the percentage of visitors who complete the desired action.
-
-**Formula:**
-
-`Conversion Rate = Conversions / Visitors × 100`
-
-- Overall Conversion Rate: **8.5%**
-- Highest monthly conversion: **18.5% in January**
-- Lowest monthly conversion: **4.3% in May**
+- **Overall conversion rate: 10%**
+- Highest monthly conversion: **17% (January)**
+- Lowest monthly conversion: **6% (September)**
 
 ### Click-Through Rate (CTR)
+**Formula:** CTR = Clicks / Views × 100
 
-CTR measures the percentage of views that resulted in clicks.
-
-**Formula:**
-
-`CTR = Clicks / Views × 100`
-
-- CTR: **15.37%**
+- **CTR: 19.66%** (1.79M clicks across 9.08M views)
 
 ### Customer Engagement
-
-Customer engagement was analyzed using:
-
-- Views
-- Clicks
-- Likes
-- Comments
-
-Views peaked during February and July and declined during the later part of the year.
+Measured across views, clicks, and likes:
+- **9M+ views**
+- **2M clicks**
+- **414K likes** (4.56% of views)
+- Engagement peaked in February and declined steadily through the second half of the year
 
 ### Customer Feedback
-
-- Average customer rating: **3.7 / 5**
-- 4-star reviews: **140**
-- 5-star reviews: **135**
-- Positive sentiment: **275**
-- Negative sentiment: **82**
-
----
+- **Average rating: 3.69 / 5**
+- Sentiment breakdown: **593 positive**, 204 negative, 180 mixed negative, 86 mixed positive, 15 neutral reviews
 
 ## 🐍 Sentiment Analysis
 
-Customer review text was analyzed using **Python and VADER sentiment analysis**.
-
-VADER was used to classify customer reviews into different sentiment categories, including:
-
-- Positive
-- Negative
-- Mixed Positive
-- Mixed Negative
-- Neutral
-
-This analysis provided additional context beyond numerical ratings by helping understand what customers were actually saying in their reviews.
-
----
+Customer review text was analyzed using Python and **VADER** sentiment analysis, classifying reviews into five categories — Positive, Negative, Mixed Positive, Mixed Negative, and Neutral — to add qualitative context beyond star ratings alone.
 
 ## 📊 Power BI Dashboard
 
-An interactive Power BI dashboard was created to analyze:
+A 3-page interactive Power BI dashboard was built to explore conversion, engagement, and sentiment from multiple angles.
 
-- Conversion performance
-- Customer engagement
-- Customer ratings
-- Customer sentiment
-- Product-level performance
-- Monthly trends
-- Marketing content performance
+**1. Overview** — Overall conversion rate, views/clicks/likes, average rating, monthly conversion trends, and product-level conversion performance.
 
-### Dashboard Pages
+**2. Customer Review Details** — Rating distribution, sentiment categories, review-level detail, and the relationship between rating and sentiment over time.
 
-#### 1. Overview
-
-Provides an overall view of:
-
-- Conversion rate
-- Views, clicks and likes
-- Customer ratings
-- Monthly conversion trends
-- Product-level conversion performance
-
-#### 2. Customer Review Details
-
-Provides analysis of:
-
-- Customer ratings
-- Sentiment categories
-- Review-level details
-- Rating and sentiment relationships
-- Monthly sentiment trends
-
-#### 3. Social Media Details
-
-Provides analysis of:
-
-- Views
-- Clicks
-- Likes
-- Monthly engagement trends
-- Content-type performance
-- Product-level engagement
-
----
+**3. Social Media Details** — Views, clicks, and likes by month, content-type performance (Blog, Social Media, Video), and product-level engagement.
 
 ## 🔍 Key Findings
 
-- Conversion rates varied considerably across the year.
-- January recorded the highest conversion rate at **18.5%**.
-- May recorded the lowest conversion rate at **4.3%**.
-- Marketing views declined during the later part of the year.
-- Blog content generated the highest number of views.
-- Customer feedback was generally positive.
-- The average customer rating of **3.7/5** indicated room for improvement.
-
----
+- Conversion rates varied significantly across the year, from 17% in January down to 6% by September.
+- Marketing engagement (views and clicks) trended downward through the second half of the year.
+- Blog content consistently generated the highest views among content types.
+- Customer feedback skewed positive overall, but the 3.69/5 average rating and 204 negative reviews point to specific, addressable pain points.
 
 ## 💡 Recommendations
 
-### 1. Improve Conversion Rates
+**1. Improve Conversion Rates**
+Focus marketing spend on consistently high-converting categories (e.g., Kayaks, Ski Boots, Baseball Gloves) and run targeted seasonal promotions during historically weaker months like September.
 
-Focus marketing efforts on high-performing product categories such as:
+**2. Improve Customer Engagement**
+Experiment with more interactive content formats, encourage user-generated content, strengthen calls-to-action, and prioritize campaign timing around historically lower-engagement periods.
 
-- Kayaks
-- Ski Boots
-- Baseball Gloves
-
-Use seasonal promotions and targeted campaigns during stronger-performing periods to improve conversion during weaker months.
-
-### 2. Improve Customer Engagement
-
-- Experiment with more engaging content formats
-- Use interactive videos
-- Encourage user-generated content
-- Strengthen calls-to-action
-- Focus on periods with historically lower engagement
-
-### 3. Improve Customer Feedback
-
-Create a feedback loop for mixed and negative reviews.
-
-- Identify recurring customer concerns
-- Address underlying issues
-- Improve products and customer experience
-- Use customer feedback to guide future improvements
-
----
+**3. Improve Customer Feedback**
+Build a structured feedback loop for negative and mixed reviews to identify recurring product or service issues and close the loop with customers.
 
 ## 📌 Project Outcome
 
-This project demonstrates how **SQL, Python, and Power BI** can be combined to move from raw business data to actionable insights.
-
-By analyzing conversion, marketing engagement, and customer feedback together, businesses can identify performance gaps and make more informed marketing and customer-experience decisions.
-
----
+This project demonstrates how SQL, Python, and Power BI can be combined to move from raw, siloed business data to a single, actionable view of marketing and customer performance — surfacing where conversion is leaking, why engagement is dropping, and what customers are actually saying about the product.
 
 ## 📁 Project Structure
 
-```text
+```
 marketing-analytics-customer-insights/
 │
 ├── README.md
@@ -265,3 +143,4 @@ marketing-analytics-customer-insights/
 │
 └── Documentation/
     └── Marketing_Analysis.pdf
+```
